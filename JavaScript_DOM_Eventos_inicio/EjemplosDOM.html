@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Manipulación del DOM</title>
+</head>
+<body>
+    <h1 id="titulo">Contador de clicks</h1>
+    <button id="mi-boton">😎</button>
+    <button id="reload">Click para reiniciar</button>
+    <script>
+        // Selecciona el botón y el título
+        let button = document.getElementById('mi-boton');
+        let title = document.getElementById('titulo');
+
+        // Añade un evento click al botón
+
+        let count = 0
+        button.addEventListener('click', function() {
+            // Cambia el texto del título
+
+            if (count < 20) {
+                count++;
+                title.innerText = `Número de clicks registrados: ${count}`;
+            } else {title.innerText= '¡DETENTE!';}
+        });
+
+        const reload = document.getElementById("reload");
+
+reload.addEventListener("click", (_) => {
+  // el _ es para indicar la ausencia de parametros
+  location.reload();
+});
+        
+    </script>
+</body>
+</html>
