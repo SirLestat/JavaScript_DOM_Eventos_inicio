@@ -32,25 +32,3 @@ console.log(nuevoEnlace);
 //4. Agregarlo al documento
 const navegacion = document.querySelector('.navegacion');
 navegacion.appendChild(nuevoEnlace);
-
-
-//Eventos
-
-console.log(1);
-
-window.addEventListener('load', function() { // El evento load se dispara cuando toda la página ha sido cargada
-    console.log(2);
-});
-
-window.onload = function() { // window.onload es una forma más antigua de manejar el evento load.
-    console.log(3);
-}
-
-document.addEventListener('DOMContentLoaded', function() { // solo espera por el html, pero no espera css o imagenes
-    console.log(4); 
-})
-
-console.log(5);
-window.onscroll = function() {
-    console.log('Scrolling');
-}
